@@ -1,0 +1,12 @@
+specVersion: "v1"
+serviceId: "video-editor-website2"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "video-editor-website2-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./example"]

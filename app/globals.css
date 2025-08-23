@@ -1,0 +1,402 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Added custom Ethiopian Orthodox church color palette */
+  --church-golden: #fcb040;
+  --church-golden-bright: #ffb341;
+  --church-brown-dark: #3b2313;
+  --church-brown-chocolate: #382112;
+  --church-white: #ffffff;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Added church color utilities */
+  --color-church-golden: var(--church-golden);
+  --color-church-golden-bright: var(--church-golden-bright);
+  --color-church-brown-dark: var(--church-brown-dark);
+  --color-church-brown-chocolate: var(--church-brown-chocolate);
+  --color-church-white: var(--church-white);
+
+  /* Animation utilities */
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-wave: wave 2s ease-in-out infinite;
+  --animate-slide-in-right: slideInRight 0.3s ease-out;
+  --animate-slide-in-up: slideInUp 0.6s ease-out;
+  --animate-fade-in: fadeIn 0.8s ease-out;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Added custom church-themed component styles */
+@layer components {
+  /* Hero Section Styles */
+  .hero-background {
+    @apply min-h-screen bg-cover bg-center bg-no-repeat relative;
+    background-image: url("/images/church-logo.png");
+  }
+
+  .hero-overlay {
+    @apply absolute inset-0 bg-black/50 backdrop-blur-sm;
+  }
+
+  .hero-content {
+    @apply relative z-10 min-h-screen flex flex-col;
+  }
+
+  /* Navigation Styles */
+  .church-navbar {
+    @apply w-full py-4 px-4 sm:px-6 lg:px-8;
+  }
+
+  .church-navbar-content {
+    @apply max-w-7xl mx-auto flex items-center justify-between;
+  }
+
+  .church-logo {
+    @apply h-12 w-12 sm:h-16 sm:w-16 object-contain animate-float;
+  }
+
+  .church-bible-verse {
+    @apply text-white text-sm sm:text-base lg:text-lg font-medium text-center px-4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Button Styles */
+  .church-button-primary {
+    @apply px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+    background-color: var(--church-brown-dark);
+    color: var(--church-white);
+  }
+
+  .church-button-secondary {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105;
+    background-color: var(--church-golden);
+    color: var(--church-brown-dark);
+  }
+
+  /* Text Styles */
+  .church-title {
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white text-center mb-6;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke: 2px var(--church-golden);
+  }
+
+  .church-subtitle {
+    @apply text-xl sm:text-2xl lg:text-3xl font-semibold text-center mb-8;
+    color: var(--church-golden);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .church-address {
+    @apply text-base sm:text-lg lg:text-xl text-white text-center mb-6 leading-relaxed;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Wave Animation */
+  .wave-text {
+    @apply relative inline-block;
+  }
+
+  .wave-text::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-full h-1 rounded-full;
+    background: linear-gradient(90deg, var(--church-golden), var(--church-golden-bright), var(--church-golden));
+    animation: wave 2s ease-in-out infinite;
+  }
+
+  /* Form Styles */
+  .church-form-card {
+    @apply rounded-2xl border shadow-lg backdrop-blur-sm;
+    background-color: rgba(252, 176, 64, 0.2);
+    border-color: var(--church-golden);
+  }
+
+  .church-form-input {
+    @apply w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-offset-2 transition-colors;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: var(--church-golden);
+    color: var(--church-brown-dark);
+  }
+
+  .church-form-input:focus {
+    border-color: var(--church-golden-bright);
+    box-shadow: 0 0 0 2px rgba(252, 176, 64, 0.2);
+  }
+
+  .church-form-label {
+    @apply block text-sm font-medium mb-2 text-white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Service Card Styles */
+  .service-card {
+    @apply p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+    background-color: rgba(252, 176, 64, 0.1);
+    border-color: var(--church-golden);
+  }
+
+  .service-card:hover {
+    background-color: rgba(252, 176, 64, 0.2);
+    border-color: var(--church-golden-bright);
+  }
+
+  .service-card.selected {
+    background-color: rgba(252, 176, 64, 0.3);
+    border-color: var(--church-golden-bright);
+    box-shadow: 0 0 20px rgba(252, 176, 64, 0.3);
+  }
+
+  /* Social Media Links */
+  .social-links {
+    @apply flex justify-center space-x-6 mt-8;
+  }
+
+  .social-link {
+    @apply p-3 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg;
+    background-color: rgba(252, 176, 64, 0.2);
+    color: var(--church-golden);
+  }
+
+  .social-link:hover {
+    background-color: rgba(252, 176, 64, 0.3);
+    color: var(--church-golden-bright);
+  }
+
+  /* Toast Notification */
+  .church-toast {
+    @apply fixed top-4 right-4 p-6 rounded-lg shadow-lg z-50 max-w-md;
+    background-color: var(--church-golden);
+    color: var(--church-brown-dark);
+    animation: slideInRight 0.3s ease-out;
+  }
+
+  /* Progress Indicator */
+  .progress-step {
+    @apply flex items-center justify-center w-8 h-8 rounded-full border-2 font-semibold text-sm transition-all duration-300;
+  }
+
+  .progress-step.active {
+    background-color: var(--church-golden);
+    border-color: var(--church-golden);
+    color: var(--church-brown-dark);
+  }
+
+  .progress-step.completed {
+    background-color: var(--church-brown-dark);
+    border-color: var(--church-brown-dark);
+    color: var(--church-white);
+  }
+
+  .progress-step.inactive {
+    background-color: transparent;
+    border-color: var(--church-golden);
+    color: var(--church-golden);
+  }
+}
+
+/* Added custom animations */
+@layer utilities {
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes wave {
+    0%,
+    100% {
+      transform: scaleX(1);
+    }
+    50% {
+      transform: scaleX(1.1);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-wave {
+    animation: wave 2s ease-in-out infinite;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.3s ease-out;
+  }
+
+  .animate-slide-in-up {
+    animation: slideInUp 0.6s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  /* Staggered animation delays */
+  .animate-delay-100 {
+    animation-delay: 0.1s;
+  }
+  .animate-delay-200 {
+    animation-delay: 0.2s;
+  }
+  .animate-delay-300 {
+    animation-delay: 0.3s;
+  }
+  .animate-delay-400 {
+    animation-delay: 0.4s;
+  }
+  .animate-delay-500 {
+    animation-delay: 0.5s;
+  }
+}
