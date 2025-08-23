@@ -4,8 +4,7 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'ሐይመተ አብርሃም ሚድያ'
- 
+  title: 'ሐይመተ አብርሃም ሚድያ' 
 }
 
 export default function RootLayout({

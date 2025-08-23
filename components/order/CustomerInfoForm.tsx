@@ -104,13 +104,13 @@ export function CustomerInfoForm({ customerInfo, onCustomerInfoChange, onNext }:
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="teaching">ት/ት ክፍል</SelectItem>
-                <SelectItem value="music">መዝሙር ክፍል</SelectItem>
+                <SelectItem value="mezmur">መዝሙር ክፍል</SelectItem>
                 <SelectItem value="members">አባላት ጉዳይ</SelectItem>
-                <SelectItem value="youth"> ጽ/ቤት</SelectItem>
-                <SelectItem value="women">ህጻናት እና አዳጊ</SelectItem>
-                <SelectItem value="media">ልማት ክፍል</SelectItem>
-                <SelectItem value="admin">የበገና</SelectItem>
-                 <SelectItem value="admin">ንብረት ክፍል</SelectItem>
+                <SelectItem value="tshfetbet"> ጽ/ቤት</SelectItem>
+                <SelectItem value="htsanat ena adagi">ህጻናት እና አዳጊ</SelectItem>
+                <SelectItem value="lmatkfl">ልማት ክፍል</SelectItem>
+                <SelectItem value="begena">የበገና</SelectItem>
+                 <SelectItem value="nbret">ንብረት ክፍል</SelectItem>
               </SelectContent>
             </Select>
           </div>
